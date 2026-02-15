@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Notification Settings</title>
+<style>
+body{
+  font-family:'Segoe UI';
+  background: linear-gradient(135deg,#11998e,#38ef7d);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.card{
+  background:white;
+  width:420px;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+.row{
+  display:flex;
+  justify-content:space-between;
+  margin:14px 0;
+}
+button{
+  width:100%;
+  padding:12px;
+  background:#11998e;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+<h2>Notification Settings</h2>
+
+<div class="row">
+<label>Email Notifications</label>
+<input type="checkbox" checked>
+</div>
+
+<div class="row">
+<label>SMS Alerts</label>
+<input type="checkbox">
+</div>
+
+<div class="row">
+<label>Event Reminders</label>
+<input type="checkbox" checked>
+</div>
+
+<button onclick="save()">Save Preferences</button>
+</div>
+
+<script>
+function save(){
+ alert("Notification preferences saved");
+}
+</script>
+
+</body>
+</html>

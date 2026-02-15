@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile Settings</title>
+<style>
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#36d1dc,#5b86e5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+.card{
+  background:white;
+  width:420px;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+h2{margin-bottom:15px;}
+input{
+  width:100%;
+  padding:12px;
+  margin:8px 0;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+button{
+  width:100%;
+  padding:12px;
+  background:#5b86e5;
+  color:white;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+<h2>Profile Settings</h2>
+
+<input id="name" placeholder="Full Name">
+<input id="email" placeholder="Email">
+<input id="phone" placeholder="Phone">
+
+<button onclick="saveProfile()">Save Changes</button>
+</div>
+
+<script>
+function saveProfile(){
+  const email = document.getElementById("email").value;
+  if(!email.includes("@")){
+    alert("Enter valid email");
+    return;
+  }
+  alert("Profile updated successfully");
+}
+</script>
+
+</body>
+</html>
