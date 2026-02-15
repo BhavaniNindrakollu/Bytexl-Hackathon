@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Revenue Trends</title>
-<style>
-body{
-  font-family: Arial;
-  background: linear-gradient(to right,#ff512f,#dd2476);
-  padding:40px;
-}
-.table{
-  background:white;
-  border-radius:12px;
-  padding:20px;
-  width:420px;
-}
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-td,th{
-  padding:10px;
-  border-bottom:1px solid #ddd;
-  text-align:left;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revenue Trends - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<h1 style="color:white;">Revenue Trends</h1>
+<body class="auth-body">
+  <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h2>Revenue Trends</h2>
+        <a href="analytics.html" class="btn btn-outline">&larr; Back</a>
+      </div>
 
-<div class="table">
-<table>
-<tr><th>Month</th><th>Revenue</th></tr>
-<tr><td>Jan</td><td>$8,500</td></tr>
-<tr><td>Feb</td><td>$10,200</td></tr>
-<tr><td>Mar</td><td>$12,900</td></tr>
-<tr><td>Apr</td><td>$15,400</td></tr>
-</table>
-</div>
-
+      <table class="table" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background-color: var(--light); text-align: left;">
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Month</th>
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Revenue</th>
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Growth</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">January</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">$8,500</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border); color: #10b981;">+5%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">February</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">$10,200</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border); color: #10b981;">+20%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">March</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">$12,900</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border); color: #10b981;">+26%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">April</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">$15,400</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border); color: #10b981;">+19%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
+
 </html>

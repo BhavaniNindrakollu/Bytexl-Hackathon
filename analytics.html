@@ -1,56 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Analytics</title>
-<style>
-body{
-    margin:0;
-    font-family:Segoe UI;
-    background:palevioletred;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-.container{
-    text-align:center;
-    width:80%;
-}
-a{
-    text-decoration: none;
-}
-h1{
-    color:white;
-    margin-bottom:40px;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 15px 30px rgba(0,0,0,0.2);
-    transition:0.3s;
-}
-.card:hover{
-    transform:translateY(-8px);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - EventPro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="dashboard.js" defer></script>
 </head>
-<body>
-<div class="container">
-<h1>Analytics</h1>
-<div class="grid">
-<div class="card"><h3>
-    <a href="event growth.html">Event Growth</h3></a></div>
-<div class="card"><h3>
-    <a href="revenue trends.html">Revenue Trends</h3></a></div>
-<div class="card"><h3>
-    <a href="vendor performance.html">Vendor Performance</h3></a></div>
-</div>
-</div>
+
+<body class="dashboard-body">
+
+    <!-- Mobile Nav Toggle -->
+    <button class="mobile-nav-toggle">
+        <i class="fas fa-bars" style="color: var(--primary);"></i>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar">
+        <div class="logo">EventPro</div>
+        <div class="nav">
+            <a href="eventPlanningDashboard.html">Dashboard</a>
+            <a href="events.html">Events</a>
+            <a href="vendors.html">Vendors</a>
+            <a href="budget.html">Budget</a>
+            <a href="analytics.html" class="active">Analytics</a>
+            <a href="settingsOfEvents.html">Settings</a>
+            <a href="index.html" style="margin-top: 2rem; opacity: 0.7; font-size: 0.9em;">Back to Home</a>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="topbar">
+            <h1>Analytics</h1>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Growth</h3>
+                <h2>Event Growth</h2>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Track attendance and reach over time.</p>
+                <a href="event growth.html" class="btn btn-outline" style="margin-top: 15px; font-size: 0.9rem;">View
+                    Report</a>
+            </div>
+
+            <div class="card">
+                <h3>Finance</h3>
+                <h2>Revenue Trends</h2>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Analyze income streams and profitability.</p>
+                <a href="revenue trends.html" class="btn btn-outline" style="margin-top: 15px; font-size: 0.9rem;">View
+                    Report</a>
+            </div>
+
+            <div class="card">
+                <h3>Partners</h3>
+                <h2>Vendor Activity</h2>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Monitor vendor performance and payments.</p>
+                <a href="vendor performance.html" class="btn btn-outline"
+                    style="margin-top: 15px; font-size: 0.9rem;">View Report</a>
+            </div>
+        </div>
+    </main>
+
 </body>
+
 </html>

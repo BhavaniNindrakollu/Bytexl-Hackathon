@@ -1,87 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Dashboard</title>
-<link rel="stylesheet" href="Code.css">
-<script src="dashboard.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EventPro</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- New Design System -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="dashboard.js" defer></script>
 </head>
 
-<body >
+<body class="dashboard-body">
 
-<aside class="sidebar">
-    <div class="logo">EventPro</div>
-    <div class="nav">
-        <a href="eventPlanningDashboard.html" class="active">Dashboard</a>
-        <a href="events.html">Events</a>
-        <a href="vendors.html">Vendors</a>
-        <a href="budget.html">Budget</a>
-        <a href="analytics.html">Analytics</a>
-        <a href="settingsOfEvents.html">Settings</a>
-    </div>
-</aside>
-<main class="main dashboard-bg">
-     
+    <!-- Mobile Nav Toggle -->
+    <button class="mobile-nav-toggle">
+        <i class="fas fa-bars" style="color: var(--primary);"></i>
+    </button>
+    <div class="sidebar-overlay"></div>
 
-    <div class="topbar">
-        <h1>Dashboard</h1>
-        
-    </div>
+    <aside class="sidebar">
+        <div class="logo">EventPro</div>
+        <div class="nav">
+            <a href="eventPlanningDashboard.html" class="active">Dashboard</a>
+            <a href="events.html">Events</a>
+            <a href="vendors.html">Vendors</a>
+            <a href="budget.html">Budget</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="settingsOfEvents.html">Settings</a>
+            <a href="index.html" style="margin-top: 2rem; opacity: 0.7; font-size: 0.9em;">Back to Home</a>
+        </div>
+    </aside>
 
-    <div class="grid">
-        <div class="card">
-    <h3>Upcoming Events</h3>
-    <h2 class="stat-number" data-target="178">0</h2>
-</div>
+    <main class="main">
 
-<div class="card">
-    <h3>Total Revenue</h3>
-    <h2 class="stat-number" data-target="86401" data-money="true">0</h2>
-</div>
-
-<div class="card">
-    <h3>Vendors</h3>
-    <h2 class="stat-number" data-target="32">0</h2>
-</div>
-
-<div class="card">
-    <h3>Pending Tasks</h3>
-    <h2 class="stat-number" data-target="24">0</h2>
-</div>
- <b> </b>
-        <div class="sign"> 
-       
-            
-            <a href="signup.html" >
-
-
-            Sign Up 
-            </a>
-            
-       </div> 
-        
-        </div> <b> </b>
-       <div class="chart-card">
-    <h3>Event Ticket Distribution</h3>
-
-    <div class="donut-wrapper">
-        <div class="donut">
-            <div class="center-text">
-                <h2>60%</h2>
-                <p>Sold</p>
+        <div class="topbar">
+            <h1>Dashboard</h1>
+            <div class="user-profile">
+                <!-- Placeholder for user avatar if needed -->
             </div>
         </div>
-    </div>
 
-    <div class="legend">
-        <div><span class="dot sold"></span> Sold - 60%</div>
-        <div><span class="dot pending"></span> Reserved - 25%</div>
-        <div><span class="dot available"></span> Available - 15%</div>
-    </div>
-</div>
-    
+        <!-- Metric Cards -->
+        <div class="grid">
+            <div class="card">
+                <h3>Upcoming Events</h3>
+                <h2 class="stat-number" data-target="178">0</h2>
+            </div>
 
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <h2 class="stat-number" data-target="86401" data-money="true">0</h2>
+            </div>
 
-</main>
+            <div class="card">
+                <h3>Vendors</h3>
+                <h2 class="stat-number" data-target="32">0</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending Tasks</h3>
+                <h2 class="stat-number" data-target="24">0</h2>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="chart-card">
+            <h3>Event Ticket Distribution</h3>
+
+            <div class="donut-wrapper">
+                <div class="donut">
+                    <div class="center-text">
+                        <h2 id="donutPercent">60%</h2>
+                        <p>Sold</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="legend">
+                <div><span class="dot sold"></span> Sold - 60%</div>
+                <div><span class="dot pending"></span> Reserved - 25%</div>
+                <div><span class="dot available"></span> Available - 15%</div>
+            </div>
+        </div>
+
+    </main>
 
 </body>
+
 </html>

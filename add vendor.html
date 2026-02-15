@@ -1,52 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Add Vendor</title>
-<style>
-body{
-  font-family: Arial;
-  background: linear-gradient(to right,#11998e,#38ef7d);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-}
-.form{
-  background:white;
-  padding:30px;
-  border-radius:12px;
-  width:350px;
-}
-input,select{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-}
-button{
-  width:100%;
-  padding:12px;
-  background:#11998e;
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Vendor - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<div class="form">
-<h2>Add Vendor</h2>
-<input placeholder="Vendor Name">
-<input placeholder="Phone Number">
-<select>
-<option>Food</option>
-<option>Lighting</option>
-<option>Sound</option>
-<option>Decoration</option>
-</select>
-<input placeholder="Address">
-<button>Add Vendor</button>
-</div>
+<body class="auth-body">
+  <div class="auth-card" style="max-width: 500px;">
+    <div class="auth-header">
+      <h1>Add New Vendor</h1>
+      <p>Register a new service provider</p>
+    </div>
+    <form>
+      <div class="form-group">
+        <label>Vendor Name</label>
+        <input type="text" class="form-input" placeholder="Company Name">
+      </div>
+      <div class="form-group">
+        <label>Service Category</label>
+        <select class="form-input">
+          <option>Catering</option>
+          <option>Photography</option>
+          <option>Decor</option>
+          <option>Music</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Contact Email</label>
+        <input type="email" class="form-input" placeholder="vendor@example.com">
+      </div>
+      <button class="btn btn-primary" style="width: 100%;">Add Vendor</button>
+    </form>
+    <div class="auth-footer" style="margin-top: 1.5rem;">
+      <a href="vendors.html" class="btn btn-outline" style="border: none; padding: 0.5rem 1rem;">&larr; Back to
+        Management</a>
+    </div>
+  </div>
 </body>
+
 </html>

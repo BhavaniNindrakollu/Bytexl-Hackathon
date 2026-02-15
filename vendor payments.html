@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Vendor Payments</title>
-<style>
-body{
-  font-family: Arial;
-  background: linear-gradient(to right,#134e5e,#71b280);
-  padding:40px;
-}
-.pay{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  margin:15px 0;
-}
-.status{
-  font-weight:bold;
-  color:green;
-}
-.pending{
-  color:red;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendor Payments - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<h1>Vendor Payments</h1>
+<body class="auth-body">
+  <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <h2>Payment History</h2>
+        <a href="vendors.html" class="btn btn-outline">&larr; Back</a>
+      </div>
 
-<div class="pay">
-<h3>ABC Caterers</h3>
-<p>Amount: ₹25,000</p>
-<p class="status">Paid</p>
-</div>
-
-<div class="pay">
-<h3>Royal Sounds</h3>
-<p>Amount: ₹12,000</p>
-<p class="pending">Pending</p>
-</div>
-
+      <table class="table" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr style="background-color: var(--light); text-align: left;">
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Date</th>
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Vendor</th>
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Amount</th>
+            <th style="padding: 12px; border-bottom: 1px solid var(--border);">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">Feb 10, 2026</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">Catering Co.</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">$1,500.00</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);"><span
+                class="badge badge-primary">Paid</span></td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">Feb 12, 2026</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">SoundWave</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);">$800.00</td>
+            <td style="padding: 12px; border-bottom: 1px solid var(--border);"><span class="badge"
+                style="background: #fee2e2; color: #ef4444;">Pending</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
+
 </html>

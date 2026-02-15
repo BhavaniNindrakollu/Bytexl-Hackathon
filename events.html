@@ -1,56 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Events</title>
-<style>
-body{
-    margin:0;
-    font-family:Segoe UI;
-    background:purple;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-.container{
-    text-align:center;
-    width:100%;
-}
-a{
-    text-decoration: none;
-}
-h1{
-    color: white;
-    margin-bottom:40px;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-.card{
-    background:plum;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 15px 30px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.card:hover{
-    transform:translateY(-8px);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - EventPro</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- New Design System -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<div class="container">
-<h1>Events Management</h1>
-<div class="grid">
-<div class="card"><h3>
-   <a href="create event.html" >Create Event</h3></a></div>
-<div class="card"><h3>
-    <a href= "upcoming event.html">Upcoming Events</h3></a></div>
-<div class="card"><h3>
-    <a href="past event.html">Past Events</h3></a></div>
-</div>
-</div>
+
+<body class="dashboard-body">
+
+    <!-- Mobile Nav Toggle -->
+    <button class="mobile-nav-toggle">
+        <i class="fas fa-bars" style="color: var(--primary);"></i>
+    </button>
+    <div class="sidebar-overlay"></div>
+
+    <aside class="sidebar">
+        <div class="logo">EventPro</div>
+        <div class="nav">
+            <a href="eventPlanningDashboard.html">Dashboard</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="vendors.html">Vendors</a>
+            <a href="budget.html">Budget</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="settingsOfEvents.html">Settings</a>
+            <a href="index.html" style="margin-top: 2rem; opacity: 0.7; font-size: 0.9em;">Back to Home</a>
+        </div>
+    </aside>
+
+    <main class="main">
+        <div class="topbar">
+            <h1>Events Management</h1>
+            <button class="btn btn-primary" onclick="alert('Modal feature coming soon!')">+ New Event</button>
+        </div>
+
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <h3>Action</h3>
+                <h2>Create Event</h2>
+                <p style="margin-top: 10px; font-size: 0.9rem;">Start planning a new event from scratch.</p>
+                <a href="create event.html" class="btn btn-outline" style="margin-top: 15px; font-size: 0.9rem;">Start
+                    Now</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <h3>View</h3>
+                <h2>Upcoming</h2>
+                <h2 class="stat-number" style="font-size: 2rem;">12</h2>
+                <a href="upcoming event.html" class="btn btn-outline" style="margin-top: 15px; font-size: 0.9rem;">View
+                    All</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <h3>History</h3>
+                <h2>Past Events</h2>
+                <h2 class="stat-number" style="font-size: 2rem;">45</h2>
+                <a href="past event.html" class="btn btn-outline" style="margin-top: 15px; font-size: 0.9rem;">View
+                    Archive</a>
+            </div>
+        </div>
+    </main>
+
 </body>
+
 </html>

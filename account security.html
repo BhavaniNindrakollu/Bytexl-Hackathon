@@ -1,70 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Account Security</title>
-<style>
-body{
-  font-family:'Segoe UI';
-  background: linear-gradient(135deg,#ff512f,#dd2476);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-}
-.card{
-  background:white;
-  width:420px;
-  padding:30px;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-input{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:1px solid #ccc;
-  border-radius:8px;
-}
-button{
-  width:100%;
-  padding:12px;
-  background:#dd2476;
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Security - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<div class="card">
-<h2>Account Security</h2>
+<body class="auth-body">
+  <div class="auth-card" style="max-width: 500px;">
+    <div class="auth-header">
+      <h2>Account Security</h2>
+      <p>Update your password</p>
+    </div>
+    <form onsubmit="event.preventDefault(); updatePass();">
+      <div class="form-group">
+        <label>New Password</label>
+        <input type="password" id="p1" class="form-input" placeholder="New Password">
+      </div>
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <input type="password" id="p2" class="form-input" placeholder="Confirm Password">
+      </div>
+      <button class="btn btn-primary" style="width: 100%;">Update Password</button>
+    </form>
+    <div class="auth-footer" style="margin-top: 1.5rem;">
+      <a href="settingsOfEvents.html" class="btn btn-outline" style="border: none; padding: 0.5rem 1rem;">&larr; Back to
+        Settings</a>
+    </div>
+  </div>
 
-<input id="p1" type="password" placeholder="New Password">
-<input id="p2" type="password" placeholder="Confirm Password">
+  <script>
+    function updatePass() {
+      let a = document.getElementById('p1').value;
+      let b = document.getElementById('p2').value;
 
-<button onclick="updatePass()">Update Password</button>
-</div>
+      if (a.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return;
+      }
 
-<script>
-function updatePass(){
- let a = p1.value;
- let b = p2.value;
+      if (a !== b) {
+        alert("Passwords do not match.");
+        return;
+      }
 
- if(a.length < 6){
-   alert("Password too short");
-   return;
- }
-
- if(a !== b){
-   alert("Passwords do not match");
-   return;
- }
-
- alert("Password updated successfully");
-}
-</script>
-
+      alert("Password updated successfully!");
+    }
+  </script>
 </body>
+
 </html>

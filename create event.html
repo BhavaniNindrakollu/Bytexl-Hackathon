@@ -1,48 +1,44 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Create Event</title>
-<style>
-body {
-  font-family: Arial;
-  background: linear-gradient(to right,#ff9a9e,#fad0c4);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height:100vh;
-}
-.card {
-  background:white;
-  padding:30px;
-  border-radius:12px;
-  width:350px;
-}
-input, textarea {
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-}
-button {
-  width:100%;
-  padding:12px;
-  background:purple;
-  color:white;
-  border:none;
-  border-radius:8px;
-  font-size:16px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Event - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<div class="card">
-<h2>Create Event</h2>
-<input placeholder="Event Name">
-<input type="date">
-<input placeholder="Location">
-<textarea placeholder="Description"></textarea>
-<button>Create</button>
-</div>
+<body class="auth-body">
+  <div class="auth-card" style="max-width: 500px;">
+    <div class="auth-header">
+      <h1>Create New Event</h1>
+      <p>Fill in the details below</p>
+    </div>
+    <form>
+      <div class="form-group">
+        <label>Event Name</label>
+        <input type="text" class="form-input" placeholder="Event Name">
+      </div>
+      <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-input">
+      </div>
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" class="form-input" placeholder="Location">
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-input" rows="3" placeholder="Description"></textarea>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;">Create Event</button>
+    </form>
+    <div class="auth-footer" style="margin-top: 1.5rem;">
+      <a href="events.html" class="btn btn-outline" style="border: none; padding: 0.5rem 1rem;">&larr; Back to
+        Events</a>
+    </div>
+  </div>
 </body>
+
 </html>

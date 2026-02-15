@@ -1,129 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Sign Up</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - EventPro</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-/* Background */
-body{
-    margin:0;
-    font-family:'Segoe UI',sans-serif;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
-}
-
-/* Form Container */
-.form-box{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(15px);
-    padding:50px 40px;
-    width:350px;
-    border-radius:20px;
-    box-shadow:0 25px 45px rgba(0, 0, 0, 0.2);
-    text-align:center;
-    color:#110e0e;
-}
-
-/* Title */
-.form-box h1{
-    margin-bottom:30px;
-    font-weight:600;
-    letter-spacing:1px;
-}
-
-/* Input Fields */
-.input-group{
-    margin-bottom:20px;
-    text-align:left;
-}
-
-.input-group label{
-    font-size:14px;
-}
-
-.input-group input{
-    width:100%;
-    padding:12px;
-    margin-top:5px;
-    border:none;
-    border-radius:8px;
-    outline:none;
-    font-size:14px;
-}
-
-/* Focus Effect */
-.input-group input:focus{
-    box-shadow:0 0 10px rgba(255,255,255,0.8);
-}
-
-/* Button */
-button{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#fff;
-    color:#ff4e50;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-    margin-top:10px;
-}
-
-button:hover{
-    background:#ff4e50;
-    color:#150e0e;
-    transform:translateY(-3px);
-}
-
-/* Bottom Text */
-.form-box p{
-    margin-top:20px;
-    font-size:13px;
-}
-
-.form-box a{
-    color:hsl(257, 91%, 48%);
-    font-weight:bold;
-    text-decoration:none;
-}
-
-.form-box a:hover{
-    text-decoration:none;
-}
-
-</style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="auth-body">
+    <!-- Animated Background Blobs -->
+    <div class="auth-bg-blob blob-1"></div>
+    <div class="auth-bg-blob blob-2"></div>
 
-<div class="form-box">
-    <h1>Create Account</h1>
-
-    <form>
-        <div class="input-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your name">
+    <div class="auth-card">
+        <div class="auth-header">
+            <div class="logo">EventPro</div>
+            <h1>Create Account</h1>
+            <p>Start managing your events for free</p>
         </div>
 
-        <div class="input-group">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email">
+        <form action="eventPlanningDashboard.html">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-input" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-input" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="Create password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Sign Up Free</button>
+        </form>
+
+        <div class="auth-footer">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
         </div>
-
-        <div class="input-group">
-            <label>Password</label>
-            <input type="password" placeholder="Create password">
-        </div>
-
-        <button type="submit">Sign Up</button>
-    </form>
-
-    <p>Already have an account? <a href="login.html">Login</a></p>
-</div>
-
+    </div>
 </body>
+
 </html>

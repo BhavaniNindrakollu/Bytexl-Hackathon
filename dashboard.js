@@ -53,38 +53,57 @@ document.addEventListener("DOMContentLoaded", function () {
     const donut = document.querySelector(".donut");
     const donutPercent = document.getElementById("donutPercent");
 
-    // Update donut gradient dynamically
-    donut.style.background = `
-        conic-gradient(
-            #6366f1 0% ${sold}%,
-            #ec4899 ${sold}% ${sold + reserved}%,
-            #e5e7eb ${sold + reserved}% 100%
-        )
-    `;
+    if (donut && donutPercent) {
+        // Update donut gradient dynamically
+        donut.style.background = `
+            conic-gradient(
+                #6366f1 0% ${sold}%,
+                #ec4899 ${sold}% ${sold + reserved}%,
+                #e5e7eb ${sold + reserved}% 100%
+            )
+        `;
 
-    // Animate center percentage
-    let percentStart = 0;
-    const percentTarget = sold;
-    const percentDuration = 1200;
-    let percentStartTime = null;
+        // Animate center percentage
+        let percentStart = 0;
+        const percentTarget = sold;
+        const percentDuration = 1200;
+        let percentStartTime = null;
 
-    function animatePercent(time) {
-        if (!percentStartTime) percentStartTime = time;
+        function animatePercent(time) {
+            if (!percentStartTime) percentStartTime = time;
 
-        let progress = Math.min((time - percentStartTime) / percentDuration, 1);
-        let value = Math.floor(progress * percentTarget);
+            let progress = Math.min((time - percentStartTime) / percentDuration, 1);
+            let value = Math.floor(progress * percentTarget);
 
-        donutPercent.innerText = value + "%";
+            donutPercent.innerText = value + "%";
 
-        if (progress < 1) {
-            requestAnimationFrame(animatePercent);
+            if (progress < 1) {
+                requestAnimationFrame(animatePercent);
+            }
         }
+
+        requestAnimationFrame(animatePercent);
     }
 
-    requestAnimationFrame(animatePercent);
+    /* =========================
+       Mobile Sidebar Toggle
+    ========================== */
+    const mobileToggle = document.querySelector('.mobile-nav-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.querySelector('.sidebar-overlay');
+
+    if (mobileToggle && sidebar) {
+        mobileToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+        });
+    }
+
+    if (overlay) {
+        overlay.addEventListener('click', function () {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    }
 
 });
-
-
-
-

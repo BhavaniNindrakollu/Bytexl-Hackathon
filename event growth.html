@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Event Growth</title>
-<style>
-body{
-  font-family: Arial;
-  background: linear-gradient(to right,#c94b4b,#4b134f);
-  color:white;
-  padding:40px;
-}
-.card{
-  background:white;
-  color:black;
-  padding:25px;
-  border-radius:12px;
-  width:420px;
-}
-.bar{
-  height:20px;
-  background:#ddd;
-  border-radius:10px;
-  margin:10px 0;
-}
-.fill{
-  height:100%;
-  background:purple;
-  border-radius:10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Growth - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .bar-container {
+      margin-bottom: 1.5rem;
+    }
+
+    .bar-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .bar-bg {
+      background: var(--border);
+      height: 12px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: 6px;
+      transition: width 1s ease-out;
+    }
+  </style>
 </head>
 
-<body>
-<h1>Event Growth</h1>
+<body class="auth-body">
+  <div class="container" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h2>Event Growth</h2>
+        <a href="analytics.html" class="btn btn-outline">&larr; Back</a>
+      </div>
 
-<div class="card">
-<p>2023</p>
-<div class="bar"><div class="fill" style="width:40%"></div></div>
+      <div class="bar-container">
+        <div class="bar-label"><span>2023</span><span>40%</span></div>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width: 40%"></div>
+        </div>
+      </div>
 
-<p>2024</p>
-<div class="bar"><div class="fill" style="width:65%"></div></div>
+      <div class="bar-container">
+        <div class="bar-label"><span>2024</span><span>65%</span></div>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width: 65%"></div>
+        </div>
+      </div>
 
-<p>2025</p>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
+      <div class="bar-container">
+        <div class="bar-label"><span>2025</span><span>90%</span></div>
+        <div class="bar-bg">
+          <div class="bar-fill" style="width: 90%"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

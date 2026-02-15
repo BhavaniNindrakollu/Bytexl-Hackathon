@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Upcoming Events</title>
-<style>
-body {
-  font-family: Arial;
-  background: linear-gradient(to right,#a18cd1,#fbc2eb);
-  padding:40px;
-}
-.event {
-  background:white;
-  padding:20px;
-  margin:15px 0;
-  border-radius:10px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upcoming Events - EventPro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-<h1>Upcoming Events</h1>
+<body class="auth-body">
+  <div class="container" style="padding-top: 40px;">
+    <div class="card" style="max-width: 600px; margin: 0 auto; text-align: center;">
+      <h2>Upcoming Events</h2>
+      <p style="margin-bottom: 2rem;">You have 3 events scheduled this month.</p>
 
-<div class="event">
-<h3>Tech Fest 2026</h3>
-<p>Date: March 10</p>
-<p>Location: College Hall</p>
-</div>
+      <div
+        style="text-align: left; background: var(--light); padding: 15px; border-radius: var(--radius-md); margin-bottom: 10px;">
+        <h4 style="margin-bottom: 5px;">Tech Summit 2026</h4>
+        <p style="font-size: 0.9rem;">March 15th, 2026 • Convention Center</p>
+      </div>
 
-<div class="event">
-<h3>Music Night</h3>
-<p>Date: March 18</p>
-<p>Location: Open Ground</p>
-</div>
+      <div
+        style="text-align: left; background: var(--light); padding: 15px; border-radius: var(--radius-md); margin-bottom: 10px;">
+        <h4 style="margin-bottom: 5px;">Product Launch</h4>
+        <p style="font-size: 0.9rem;">March 22nd, 2026 • HQ Main Hall</p>
+      </div>
 
+      <div style="margin-top: 2rem;">
+        <a href="events.html" class="btn btn-outline">&larr; Back to Events</a>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
